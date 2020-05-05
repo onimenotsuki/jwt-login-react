@@ -1,12 +1,13 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
-  return (
+// Importamos nuestro provider para poder acceder
+// a nuestro contexto en toda nuestra aplicación
+import { AuthProvider } from './contexts/auth-context';
+
+const App = () => (
+  <AuthProvider>
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
@@ -20,7 +21,7 @@ function App() {
         </a>
       </header>
     </div>
-  );
-}
+  </AuthProvider>
+);
 
 export default App;
